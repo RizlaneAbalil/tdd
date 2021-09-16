@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Dictionary {
+public class Dictionary implements IDictionary
+{
 
     private String name ;
     private HashMap<String, String> translations;
