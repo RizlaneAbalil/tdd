@@ -17,7 +17,7 @@ public class DictionaryTest
     @Test
     public void TestIsEmpty()
     {
-        assertThat(dict.isEmpty(), equalTo(false));
+        assertThat(dict.isEmpty(), equalTo(true));
     }
 
     @Test
@@ -31,6 +31,12 @@ public class DictionaryTest
     {
         dict.addTranslation("contre", "against");
         assertThat(dict.getTranslation("contre"), equalTo("against"));
-        assertThat(dict.getTranslation("contre"), equalTo("play"));
+    }
+
+    @Test
+    public void testOneTranslation2()
+    {
+        dict.addTranslation("bateau", "boat");
+        assertThat(dict.getTranslation("bateau"), equalTo("boat"));
     }
 }

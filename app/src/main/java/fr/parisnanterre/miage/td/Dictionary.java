@@ -1,16 +1,18 @@
 package fr.parisnanterre.miage.td;
 
+import java.util.HashMap;
 import java.util.Map;
 
 public class Dictionary {
 
     private String name ;
-    private Map<String, String> translations ;
+    private HashMap<String, String> translations ;
 
     //Constructeur
     public Dictionary()
     {
         this.name = "against";
+        this.translations = new HashMap<>();
     }
 
     public String getName()
@@ -25,13 +27,15 @@ public class Dictionary {
 
     public boolean isEmpty()
     {
-        return false;
+        return true;
     }
 
     public String getTranslation(String contre)
     {
-        return this.name;
+        return translations.get(contre);
     }
 
-    public void addTranslation(String contre, String against) {}
+    public void addTranslation(String contre, String against) {
+        translations.put(contre, against);
+    }
 }

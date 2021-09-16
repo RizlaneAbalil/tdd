@@ -1,2 +1,2 @@
 [X] - Tâche concernant 'getName()'
-[] - Tâche concernant 'isEmpty()'
+[X] - Tâche concernant 'isEmpty()'
