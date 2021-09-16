@@ -7,3 +7,6 @@ La duplication concerne la variable 'dict'. La variable est repétée à l'inté
 
 //Triangulation - Question 2 
 Non, car les méthodes sont reliées. 
+
+//Traductions multiples - Question 1
+Changement de la 'HashMap' en mettant une liste de String. 
