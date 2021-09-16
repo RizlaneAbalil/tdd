@@ -1,5 +1,7 @@
 package fr.parisnanterre.miage.td;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.equalTo;
@@ -8,6 +10,11 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class DictionaryTest
 {
     private Dictionary dict;
+
+    @Before
+    public void initialize () {
+        dict = new Dictionary();
+    }
 
     public DictionaryTest()
     {
@@ -38,5 +45,11 @@ public class DictionaryTest
     {
         dict.addTranslation("bateau", "boat");
         assertThat(dict.getTranslation("bateau"), equalTo("boat"));
+    }
+
+    @After
+    public void clean ()
+    {
+        dict = null;
     }
 }
