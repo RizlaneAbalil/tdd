@@ -34,12 +34,27 @@ public class Dictionary {
 
     public String getTranslation(String contre)
     {
-        //Si on trouve la clé dans la map alors on renvoie la valeur sinon on renvoie la valeur voulue dans le test
+        //Si on trouve le string en tant que clé dans la map alors on renvoie la valeur
         if(translations.containsKey(contre))
         {
             return translations.get(contre);
         }
-        return "bateau";
+        //Sinon le string est une value alors je vérifie qu'elle est dans la map
+        else
+        {
+            //Si elle est dans la map alors je renvoie la clé
+            if(translations.containsValue(contre))
+            {
+                for(Map.Entry<String, String> entry : this.translations.entrySet())
+                {
+                    if(contre.equals(entry.getValue()))
+                    {
+                        return entry.getKey();
+                    }
+                }
+            }
+            return "N'existe pas";
+        }
     }
 
     public void addTranslation(String contre, String against) {
