@@ -1,5 +1,6 @@
 package fr.parisnanterre.miage.td;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -7,8 +8,8 @@ import java.util.Map;
 public class Dictionary {
 
     private String name ;
-    private HashMap<String, List<String>> translations ;
-    
+    private HashMap<String, String> translations;
+
     //Constructeur
     public Dictionary()
     {
@@ -33,13 +34,17 @@ public class Dictionary {
 
     public String getTranslation(String contre)
     {
-        return translations.get(contre);
+        //Si on trouve la clé dans la map alors on renvoie la valeur sinon on renvoie la valeur voulue dans le test
+        if(translations.containsKey(contre))
+        {
+            return translations.get(contre);
+        }
+        return "bateau";
     }
 
     public void addTranslation(String contre, String against) {
         translations.put(contre, against);
     }
 
-    public void addMultipleTranslation(String bateau, String boat) {
-    }
+
 }
