@@ -9,12 +9,14 @@ public class Dictionary {
 
     private String name ;
     private HashMap<String, String> translations;
+    private HashMap<String, List<String>> translationsMultiple;
 
     //Constructeur
     public Dictionary()
     {
         this.name = "against";
         this.translations = new HashMap<>();
+        this.translationsMultiple = new HashMap<>();
     }
 
     public String getName()
@@ -57,8 +59,18 @@ public class Dictionary {
         }
     }
 
+    public List getMultipleTranslation(String contre)
+    {
+        return translationsMultiple.get(contre);
+    }
+
     public void addTranslation(String contre, String against) {
         translations.put(contre, against);
+    }
+
+    public void addMultipleTranslation(String contre, List liste)
+    {
+        this.translationsMultiple.put(contre, liste);
     }
 
 
