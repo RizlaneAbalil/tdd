@@ -10,6 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class DictionaryTest
 {
     private Dictionary dict;
+    private List<String> liste;
 
     @Before
     public void initialize () {
@@ -44,6 +45,14 @@ public class DictionaryTest
     public void testOneTranslation2()
     {
         dict.addTranslation("bateau", "boat");
+        assertThat(dict.getTranslation("bateau"), equalTo("boat"));
+    }
+
+    @Test
+    public void testOneTranslation3()
+    {
+        dict.addMultipleTranslation("bateau", "boat");
+        dict.addMultipleTranslation("bateau", "porte");
         assertThat(dict.getTranslation("bateau"), equalTo("boat"));
     }
 

@@ -1,13 +1,14 @@
 package fr.parisnanterre.miage.td;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Dictionary {
 
     private String name ;
-    private HashMap<String, String> translations ;
-
+    private HashMap<String, List<String>> translations ;
+    
     //Constructeur
     public Dictionary()
     {
@@ -37,5 +38,8 @@ public class Dictionary {
 
     public void addTranslation(String contre, String against) {
         translations.put(contre, against);
+    }
+
+    public void addMultipleTranslation(String bateau, String boat) {
     }
 }
