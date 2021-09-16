@@ -6,7 +6,7 @@ public class Dictionary {
     //Constructeur
     public Dictionary()
     {
-        this.name = "Example";
+        this.name = "against";
     }
 
     public String getName()
@@ -14,8 +14,15 @@ public class Dictionary {
         return this.name;
     }
 
-    /*public void setName(String name)
+    public void setName(String name)
     {
         this.name = name;
-    }*/
+    }
+
+    public String getTranslation(String contre)
+    {
+        return this.name;
+    }
+
+    public void addTranslation(String contre, String against) {}
 }

@@ -4,3 +4,6 @@ La librairie mockito permet de réaliser des tests sur des méthodes dépendante
 
 //Fake it - Question 5
 La duplication concerne la variable 'dict'. La variable est repétée à l'intérieur des méthodes de la classe 'DictionnaryTest'.   
+
+//Triangulation - Question 2 
+Oui, il est possible de faire un test avec une seule des deux méthodes.

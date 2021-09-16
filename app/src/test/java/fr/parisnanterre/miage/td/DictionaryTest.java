@@ -19,4 +19,11 @@ public class DictionaryTest
     {
         assertThat(dict.getName(), equalTo("Example"));
     }
+
+    @Test
+    public void testOneTranslation()
+    {
+        dict.addTranslation("contre", "against");
+        assertThat(dict.getTranslation("contre"), equalTo("against"));
+    }
 }
