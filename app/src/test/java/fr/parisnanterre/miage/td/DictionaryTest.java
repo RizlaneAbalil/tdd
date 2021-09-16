@@ -15,9 +15,15 @@ public class DictionaryTest
     }
 
     @Test
+    public void TestIsEmpty()
+    {
+        assertThat(dict.isEmpty(), equalTo(false));
+    }
+
+    @Test
     public void testDictionaryName()
     {
-        assertThat(dict.getName(), equalTo("Example"));
+        assertThat(dict.getName(), equalTo("against"));
     }
 
     @Test
@@ -25,5 +31,6 @@ public class DictionaryTest
     {
         dict.addTranslation("contre", "against");
         assertThat(dict.getTranslation("contre"), equalTo("against"));
+        assertThat(dict.getTranslation("contre"), equalTo("play"));
     }
 }
