@@ -4,13 +4,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
 
 public class DictionaryTest
 {
     private Dictionary dict;
-    private List<String> liste;
 
     @Before
     public void initialize () {
@@ -49,12 +49,12 @@ public class DictionaryTest
     }
 
     @Test
-    public void testOneTranslation3()
+    public void testOneTranslationInverse()
     {
-        dict.addMultipleTranslation("bateau", "boat");
-        dict.addMultipleTranslation("bateau", "porte");
-        assertThat(dict.getTranslation("bateau"), equalTo("boat"));
+        dict.addTranslation("bateau", "boat");
+        assertThat(dict.getTranslation("boat"), equalTo("bateau"));
     }
+
 
     @After
     public void clean ()
